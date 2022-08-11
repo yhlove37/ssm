@@ -29,4 +29,16 @@ public class CheckItemServiceImpl implements CheckItemService {
           return new PageResult(page.getTotal(),page.getResult());
     }
 
-}
+    @Override
+    public void delete(Integer id) {
+        long count = checkItemDao.findCountByCheckItemId(id);
+        if(count > 0){
+            //当前检查项被引用，不能删除
+            throw new RuntimeException("当前检查项被引用，不能删除");
+        }
+        checkItemDao.deleteById(id);
+    }
+
+    }
+
+
