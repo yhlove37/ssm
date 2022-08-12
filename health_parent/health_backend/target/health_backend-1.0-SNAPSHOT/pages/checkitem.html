@@ -229,6 +229,30 @@
             },
             methods: {
                 handleEdit() {
+                    //表單檢驗
+                    this.$refs['dataEditForm'].validate((valid)=>{
+                        if (valid){
+                            axios.post("/checkItem/edit.do",this.formData).then((response)=>{
+                            //    隱藏編輯窗口
+                                this.dialogFormVisible4Edit=false;
+                                if (response.data.flag){
+                                    this.$message({
+                                        message:response.data.message,
+                                        type: 'success'
+                                    });
+                                }else {
+                                    this.$message.error(response.data.message);
+
+                                }
+                            }).finally(()=>{
+                                this.findPage();
+                            });
+                        }else{
+                        //    表單校驗失敗
+                            this.$message.error("表單數據校驗失敗");
+                            return false;
+                        }
+                    });
                 },
                 handleAdd(){
 
@@ -284,6 +308,14 @@
                 },
                 // 弹出编辑窗口
                 handleUpdate(row) {
+                    axios.get("/checkItem/findById.do?id="+row.id).then((res)=>{
+                        if (res.data.flag){
+                            this.dialogFormVisible4Edit=true;
+                            this.formData=res.data.data;
+                        }else{
+                            this.$message.error("獲取數據失敗，請刷新當前頁面")
+                        }
+                    });
 
                 },
                 //切换页码
@@ -295,7 +327,6 @@
                 handleDelete(row) {
                     this.$confirm("确认删除吗？","提示",{type:'warning'}).then(()=>{
                         //点击确定按钮时只需此处代码
-                        //alert('用户点击的是确定按钮');
                         axios.get("/checkItem/delete.do?id=" + row.id).then((res)=> {
                             if(!res.data.flag){
                                 //删除失败
