@@ -44,19 +44,41 @@ public class CheckItemController {
 
     //删除
     @RequestMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(Integer id) {
         try {
             checkItemService.delete(id);
-        }catch (RuntimeException e){
-            return new Result(false,e.getMessage());
-        }catch (Exception e){
+        } catch (RuntimeException e) {
+            return new Result(false, e.getMessage());
+        } catch (Exception e) {
             return new Result(false, MessageConstant.DELETE_CHECKITEM_FAIL);
         }
-        return new Result(true,MessageConstant.DELETE_CHECKITEM_SUCCESS);
+        return new Result(true, MessageConstant.DELETE_CHECKITEM_SUCCESS);
     }
 
+    //编辑
+    @RequestMapping("/edit")
+    public Result edit(@RequestBody CheckItem checkItem) {
+        try {
+            checkItemService.edit(checkItem);
+        } catch (Exception e) {
+            return new Result(false, MessageConstant.EDIT_CHECKITEM_FAIL);
+        }
+        return new Result(true, MessageConstant.EDIT_CHECKITEM_SUCCESS);
+    }
+
+    //    回顯
+    @RequestMapping("/findById")
+    public Result findById(Integer id) {
+        try {
+            CheckItem checkItem = checkItemService.findById(id);
+            return new Result(true, MessageConstant.QUERY_CHECKITEM_SUCCESS, checkItem);
+        } catch (Exception e) {
+            e.printStackTrace();
+            //服务调用失败
+            return new Result(false, MessageConstant.QUERY_CHECKITEM_FAIL);
+        }
+    }
 
 }
-
 
 
