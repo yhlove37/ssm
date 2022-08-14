@@ -242,6 +242,7 @@
                                     });
                                 }else {
                                     this.$message.error(response.data.message);
+
                                 }
                             }).finally(()=>{
                                 this.findPage();
@@ -290,7 +291,6 @@
                         pageSize: this.pagination.pageSize,
                         queryString:this.pagination.queryString
                     };
-
                 //    請求後臺
                     axios.post("/checkItem/findPage.do",param).then((response)=>{
                         this.dataList=response.data.rows;
@@ -306,7 +306,6 @@
                     this.resetForm()
                     this.dialogFormVisible=true;
                 },
-
                 // 弹出编辑窗口
                 handleUpdate(row) {
                     axios.get("/checkItem/findById.do?id="+row.id).then((res)=>{
