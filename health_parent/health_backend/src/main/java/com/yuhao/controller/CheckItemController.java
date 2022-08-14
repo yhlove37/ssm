@@ -8,9 +8,12 @@ import com.yuhao.entity.QueryPageBean;
 import com.yuhao.entity.Result;
 import com.yuhao.pojo.CheckItem;
 import com.yuhao.service.CheckItemService;
+import org.aspectj.bridge.Message;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/checkItem")
@@ -78,6 +81,23 @@ public class CheckItemController {
             return new Result(false, MessageConstant.QUERY_CHECKITEM_FAIL);
         }
     }
+
+
+    @RequestMapping("/findAll")
+    public Result findAll() {
+        try {
+          List<CheckItem>  checkItems = checkItemService.findAll();
+          if (checkItems!=null &&checkItems.size()>0){
+              return new Result(true, MessageConstant.QUERY_CHECKITEM_SUCCESS, checkItems);
+          }
+          return new Result(false, MessageConstant.QUERY_CHECKITEM_FAIL);
+        } catch (Exception e) {
+            e.printStackTrace();
+            //服务调用失败
+            return new Result(false, MessageConstant.QUERY_CHECKITEM_FAIL);
+        }
+    }
+
 
 }
 

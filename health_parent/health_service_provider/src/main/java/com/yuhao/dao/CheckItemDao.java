@@ -3,6 +3,8 @@ package com.yuhao.dao;
 import com.github.pagehelper.Page;
 import com.yuhao.pojo.CheckItem;
 
+import java.util.List;
+
 public interface CheckItemDao {
     public void add(CheckItem checkItem);
     public Page<CheckItem> selectByCondition(String queryString);
@@ -14,4 +16,6 @@ public interface CheckItemDao {
      public void edit(CheckItem checkItem);
 
      public CheckItem findById(Integer id);
+
+     public List<CheckItem> findAll();
 }
