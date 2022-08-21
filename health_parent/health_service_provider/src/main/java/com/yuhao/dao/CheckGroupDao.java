@@ -17,10 +17,11 @@ public interface CheckGroupDao {
     CheckGroup findById(Integer id);
 
 
-
     void deleteAssociation(Integer id);
 
     void edit(CheckGroup checkGroup);
 
     List<Integer> findCheckItemIdsByCheckGroupId(Integer id);
+
+    List<CheckGroup> findAll();
 }

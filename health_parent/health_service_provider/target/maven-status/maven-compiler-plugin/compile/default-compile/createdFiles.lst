@@ -1,4 +1,6 @@
 com\yuhao\dao\CheckGroupDao.class
-com\yuhao\dao\CheckItemDao.class
 com\yuhao\service\impl\CheckGroupServiceImpl.class
 com\yuhao\service\impl\CheckItemServiceImpl.class
+com\yuhao\service\impl\SetmealServiceImpl.class
+com\yuhao\dao\CheckItemDao.class
+com\yuhao\dao\SetmealDao.class

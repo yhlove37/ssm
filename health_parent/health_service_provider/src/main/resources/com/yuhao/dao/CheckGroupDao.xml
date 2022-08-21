@@ -23,6 +23,11 @@
     </select>
 
 
+    <select id="findAll" resultType="com.yuhao.pojo.CheckGroup">
+        select * from t_checkgroup
+    </select>
+
+
     <!--模糊查詢-->
     <select id="selectByCondition" parameterType="string"
             resultType="com.yuhao.pojo.CheckGroup">

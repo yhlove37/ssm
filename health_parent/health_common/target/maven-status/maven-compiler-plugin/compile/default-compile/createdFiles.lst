@@ -12,3 +12,4 @@ com\yuhao\constant\MessageConstant.class
 com\yuhao\entity\PageResult.class
 com\yuhao\pojo\Menu.class
 com\yuhao\pojo\Order.class
+com\yuhao\utils\QiniuUtils.class
