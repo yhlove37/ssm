@@ -3,17 +3,20 @@ package com.yuhao.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.yuhao.constant.MessageConstant;
+import com.yuhao.constant.RedisConstant;
 import com.yuhao.entity.PageResult;
 import com.yuhao.entity.QueryPageBean;
 import com.yuhao.entity.Result;
 import com.yuhao.pojo.Setmeal;
 import com.yuhao.service.SetmealService;
 import com.yuhao.utils.QiniuUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import redis.clients.jedis.JedisPool;
 
 import java.util.UUID;
 
@@ -22,6 +25,9 @@ import java.util.UUID;
 public class SetmealController {
     @Reference
     private SetmealService setmealService;
+
+    @Autowired
+    private JedisPool jedisPool;
 
     //图片上传
     @RequestMapping("/upload")
@@ -38,6 +44,9 @@ public class SetmealController {
             //图片上传成功
             Result result = new Result(true, MessageConstant.PIC_UPLOAD_SUCCESS);
             result.setData(fileName);
+
+            //將上傳圖片的文件存入redis,基於redis的set集合
+            jedisPool.getResource().sadd(RedisConstant.SETMEAL_PIC_RESOURCES,fileName);
             return result;
         }catch (Exception e){
             e.printStackTrace();

@@ -3,12 +3,15 @@ package com.yuhao.service.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.yuhao.constant.RedisConstant;
 import com.yuhao.dao.SetmealDao;
 import com.yuhao.entity.PageResult;
 import com.yuhao.pojo.Setmeal;
 import com.yuhao.service.SetmealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import redis.clients.jedis.JedisPool;
+
 import java.util.HashMap;
 import java.util.Map;
 /**
@@ -20,6 +23,10 @@ public class SetmealServiceImpl implements SetmealService {
     @Autowired
     private SetmealDao setmealDao;
 
+
+    @Autowired
+    private JedisPool jedisPool;
+
     //新增套餐
     public void add(Setmeal setmeal, Integer[] checkgroupIds) {
         setmealDao.add(setmeal);
@@ -27,7 +34,15 @@ public class SetmealServiceImpl implements SetmealService {
             //绑定套餐和检查组的多对多关系
             setSetmealAndCheckGroup(setmeal.getId(),checkgroupIds);
         }
+        //将图片名称保存到Redis
+
+
+        jedisPool.getResource().sadd(RedisConstant.SETMEAL_PIC_DB_RESOURCES,setmeal.getImg());
+
     }
+    //将图片名称保存到Redis
+
+
 
     @Override
     public PageResult pageQuery(Integer currentPage, Integer pageSize, String queryString) {

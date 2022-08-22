@@ -60,6 +60,20 @@ public class CheckGroupServiceImpl implements CheckGroupService {
         return checkGroupDao.findAll();
     }
 
+    @Override
+    public void delete(Integer id) {
+//
+            long count = checkGroupDao.findCountBySetmealGroupId(id);
+
+            if(count > 0){
+                //当前检查被套餐引用，不能删除
+                throw new RuntimeException("当前检查組被（套餐）引用，不能删除");
+            }
+//            刪除group表
+            checkGroupDao.deleteById(id);
+//            刪除對應的group_item 關聯表
+             checkGroupDao.deleteAssociation(id);
+    };
     //向中间表(t_checkgroup_checkitem)插入数据（建立检查组和检查项关联关系）
 
 

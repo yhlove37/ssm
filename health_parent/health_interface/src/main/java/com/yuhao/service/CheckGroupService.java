@@ -2,7 +2,7 @@ package com.yuhao.service;
 
 import com.yuhao.entity.PageResult;
 import com.yuhao.pojo.CheckGroup;
-import com.yuhao.pojo.CheckItem;
+
 
 import java.util.List;
 
@@ -18,4 +18,6 @@ public interface CheckGroupService {
     void edit(CheckGroup checkGroup, Integer[] checkitemIds);
 
     List<CheckGroup> findAll();
+
+    void delete(Integer id);
 }
