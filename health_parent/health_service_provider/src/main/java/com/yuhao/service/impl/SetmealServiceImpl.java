@@ -35,15 +35,11 @@ public class SetmealServiceImpl implements SetmealService {
             setSetmealAndCheckGroup(setmeal.getId(),checkgroupIds);
         }
         //将图片名称保存到Redis
-
-
         jedisPool.getResource().sadd(RedisConstant.SETMEAL_PIC_DB_RESOURCES,setmeal.getImg());
-
     }
+
+
     //将图片名称保存到Redis
-
-
-
     @Override
     public PageResult pageQuery(Integer currentPage, Integer pageSize, String queryString) {
         PageHelper.startPage(currentPage,pageSize);

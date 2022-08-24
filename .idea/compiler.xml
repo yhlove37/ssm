@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="health_backend" />
         <module name="health_service_provider" />
+        <module name="quartzDemo" />
         <module name="health_common" />
+        <module name="health_quarz" />
         <module name="health_interface" />
       </profile>
     </annotationProcessing>
@@ -17,7 +19,10 @@
       <module name="health_common" target="1.8" />
       <module name="health_interface" target="1.8" />
       <module name="health_parent" target="1.8" />
+      <module name="health_quartz" target="1.8" />
+      <module name="health_quarz" target="1.8" />
       <module name="health_service_provider" target="1.8" />
+      <module name="quartzDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
