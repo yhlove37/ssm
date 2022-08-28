@@ -6,7 +6,6 @@ import com.github.pagehelper.PageHelper;
 import com.yuhao.dao.CheckGroupDao;
 import com.yuhao.entity.PageResult;
 import com.yuhao.pojo.CheckGroup;
-import com.yuhao.pojo.CheckItem;
 import com.yuhao.service.CheckGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
