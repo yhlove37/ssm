@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/ordersetting")
@@ -50,4 +51,20 @@ public class OrderSettingController {
         }
         return new Result(true,MessageConstant.IMPORT_ORDERSETTING_SUCCESS);
     }
+
+    @RequestMapping("/getOrderSettingByMonth")
+    public Result getOrderSettingByMonth(String date){//参数格式为：2019-03
+        try{
+            List<Map> list = orderSettingService.getOrderSettingByMonth(date);
+            //获取预约设置数据成功
+            return new Result(true,MessageConstant.GET_ORDERSETTING_SUCCESS,list);
+        }catch (Exception e){
+            e.printStackTrace();
+            //获取预约设置数据失败
+            return new Result(false,MessageConstant.GET_ORDERSETTING_FAIL);
+        }
+    }
+
+
+
 }
