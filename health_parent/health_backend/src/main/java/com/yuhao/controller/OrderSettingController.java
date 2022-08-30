@@ -7,6 +7,8 @@ import com.yuhao.entity.Result;
 import com.yuhao.pojo.OrderSetting;
 import com.yuhao.service.OrderSettingService;
 import com.yuhao.utils.POIUtils;
+import org.aspectj.bridge.Message;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -64,6 +66,23 @@ public class OrderSettingController {
             return new Result(false,MessageConstant.GET_ORDERSETTING_FAIL);
         }
     }
+
+
+    @RequestMapping("/editNumberByDate")
+    public  Result editNumberByData(@RequestBody OrderSetting orderSetting){
+        try {
+            System.out.println("+++++++++++++++++++");
+            orderSettingService.editNumberByData(orderSetting);
+            return new Result(true, MessageConstant.ORDERSETTING_SUCCESS);
+        }catch (Exception e){
+            e.printStackTrace();
+            return  new Result(false,MessageConstant.ORDERSETTING_FAIL);
+
+        }
+
+
+    }
+
 
 
 
