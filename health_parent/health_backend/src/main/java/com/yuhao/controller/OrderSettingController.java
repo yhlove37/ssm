@@ -71,7 +71,7 @@ public class OrderSettingController {
     @RequestMapping("/editNumberByDate")
     public  Result editNumberByData(@RequestBody OrderSetting orderSetting){
         try {
-            System.out.println("+++++++++++++++++++");
+
             orderSettingService.editNumberByData(orderSetting);
             return new Result(true, MessageConstant.ORDERSETTING_SUCCESS);
         }catch (Exception e){

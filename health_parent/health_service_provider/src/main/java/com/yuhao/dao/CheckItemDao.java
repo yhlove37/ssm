@@ -18,4 +18,8 @@ public interface CheckItemDao {
      public CheckItem findById(Integer id);
 
      public List<CheckItem> findAll();
+
+
+     List<CheckItem> findCheckItemById(Integer id);
+
 }

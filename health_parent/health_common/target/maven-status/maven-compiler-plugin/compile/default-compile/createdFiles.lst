@@ -1,10 +1,12 @@
 com\yuhao\entity\QueryPageBean.class
 com\yuhao\entity\Result.class
+com\yuhao\utils\ValidateCodeUtils.class
 com\yuhao\pojo\Permission.class
 com\yuhao\pojo\CheckGroup.class
 com\yuhao\pojo\OrderSetting.class
 com\yuhao\pojo\Member.class
 com\yuhao\pojo\Setmeal.class
+com\yuhao\utils\SMSUtils.class
 com\yuhao\constant\RedisConstant.class
 com\yuhao\pojo\User.class
 com\yuhao\pojo\CheckItem.class

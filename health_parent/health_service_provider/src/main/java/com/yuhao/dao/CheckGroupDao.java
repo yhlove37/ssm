@@ -30,4 +30,6 @@ public interface CheckGroupDao {
     void deleteById(Integer id);
 
     long findCountByItemGroupId(Integer id);
+
+    List<CheckGroup> findCheckGroupById(Integer id);
 }
