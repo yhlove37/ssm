@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Freemarker" />
         <module name="springSeurity" />
+        <module name="TencentDemo" />
         <module name="health_quarz" />
         <module name="health_interface" />
         <module name="ApachePol" />
@@ -32,6 +33,7 @@
       <module name="quartzDemo" target="1.5" />
       <module name="springSecurity" target="1.5" />
       <module name="springSeurity" target="1.5" />
+      <module name="TencentDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

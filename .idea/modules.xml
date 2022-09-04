@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ApachePol/ApachePol.iml" filepath="$PROJECT_DIR$/ApachePol/ApachePol.iml" />
       <module fileurl="file://$PROJECT_DIR$/Freemarker/Freemarker.iml" filepath="$PROJECT_DIR$/Freemarker/Freemarker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TencentDemo/TencentDemo.iml" filepath="$PROJECT_DIR$/TencentDemo/TencentDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/health_parent/health_backend/health_backend.iml" filepath="$PROJECT_DIR$/health_parent/health_backend/health_backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/health_parent/health_common/health_common.iml" filepath="$PROJECT_DIR$/health_parent/health_common/health_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/health_parent/health_interface/health_interface.iml" filepath="$PROJECT_DIR$/health_parent/health_interface/health_interface.iml" />
