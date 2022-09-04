@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/health_parent/health_mobile" />
     <file type="web" url="file://$PROJECT_DIR$/health_parent/health_quarz" />
     <file type="web" url="file://$PROJECT_DIR$/health_parent/health_service_provider" />
+    <file type="web" url="file://$PROJECT_DIR$/springSeurity" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,6 +14,7 @@
         <option value="$PROJECT_DIR$/quartzDemo/pom.xml" />
         <option value="$PROJECT_DIR$/ApachePol/pom.xml" />
         <option value="$PROJECT_DIR$/Freemarker/pom.xml" />
+        <option value="$PROJECT_DIR$/springSeurity/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

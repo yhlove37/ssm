@@ -7,6 +7,8 @@ import java.util.Set;
 /**
  * 权限
  */
+
+//该权限对应多个角色
 public class Permission implements Serializable{
     private Integer id;
     private String name; // 权限名称

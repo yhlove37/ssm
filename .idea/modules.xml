@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/health_parent/health_quarz/health_quarz.iml" filepath="$PROJECT_DIR$/health_parent/health_quarz/health_quarz.iml" />
       <module fileurl="file://$PROJECT_DIR$/health_parent/health_service_provider/health_service_provider.iml" filepath="$PROJECT_DIR$/health_parent/health_service_provider/health_service_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/quartzDemo/quartzDemo.iml" filepath="$PROJECT_DIR$/quartzDemo/quartzDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springSeurity/springSeurity.iml" filepath="$PROJECT_DIR$/springSeurity/springSeurity.iml" />
     </modules>
   </component>
 </project>
