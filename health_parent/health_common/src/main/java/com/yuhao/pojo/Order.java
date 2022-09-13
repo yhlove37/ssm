@@ -19,10 +19,17 @@ public class Order implements Serializable{
     private Integer setmealId;//体检套餐id
 
     public Order() {
+        super();
     }
 
     public Order(Integer id) {
         this.id = id;
+    }
+
+    public Order(Integer memberId, Date orderDate,Integer setmealId) {
+        this.memberId = memberId;
+        this.orderDate = orderDate;
+        this.setmealId = setmealId;
     }
 
     public Order(Integer memberId, Date orderDate, String orderType, String orderStatus, Integer setmealId) {
@@ -89,4 +96,18 @@ public class Order implements Serializable{
     public void setSetmealId(Integer setmealId) {
         this.setmealId = setmealId;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", memberId=" + memberId +
+                ", orderDate=" + orderDate +
+                ", orderType='" + orderType + '\'' +
+                ", orderStatus='" + orderStatus + '\'' +
+                ", setmealId=" + setmealId +
+                '}';
+    }
 }
+
+

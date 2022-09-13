@@ -2,7 +2,10 @@ D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\SetmealDao.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\OrderSettingServiceImpl.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\CheckItemDao.java
+D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\MemberDao.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\CheckGroupServiceImpl.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\SetmealServiceImpl.java
+D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\OrderDao.java
+D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\OrderServiceImpl.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\CheckGroupDao.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\OrderSettingDao.java

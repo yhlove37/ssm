@@ -11,8 +11,10 @@ com\yuhao\constant\RedisConstant.class
 com\yuhao\pojo\User.class
 com\yuhao\pojo\CheckItem.class
 com\yuhao\pojo\Role.class
+com\yuhao\utils\DateUtils.class
 com\yuhao\constant\MessageConstant.class
 com\yuhao\entity\PageResult.class
+com\yuhao\constant\RedisMessageConstant.class
 com\yuhao\pojo\Menu.class
 com\yuhao\pojo\Order.class
 com\yuhao\utils\POIUtils.class
