@@ -1,4 +1,5 @@
 com\yuhao\entity\QueryPageBean.class
+com\yuhao\utils\MD5Utils.class
 com\yuhao\entity\Result.class
 com\yuhao\utils\ValidateCodeUtils.class
 com\yuhao\pojo\Permission.class

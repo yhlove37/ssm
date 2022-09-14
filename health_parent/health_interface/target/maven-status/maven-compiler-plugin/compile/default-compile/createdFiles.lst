@@ -1,4 +1,5 @@
 com\yuhao\service\CheckGroupService.class
+com\yuhao\service\MemberService.class
 com\yuhao\service\SetmealService.class
 com\yuhao\service\OrderService.class
 com\yuhao\service\CheckItemService.class
