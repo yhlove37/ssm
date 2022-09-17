@@ -3,6 +3,7 @@ package com.yuhao.dao;
 import com.github.pagehelper.Page;
 import com.yuhao.pojo.Member;
 
+import java.util.Date;
 import java.util.List;
 
 public interface MemberDao {

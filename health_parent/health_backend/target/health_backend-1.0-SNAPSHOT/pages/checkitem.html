@@ -329,7 +329,7 @@
                         type: 'warning'
                     }).then(()=>{
                         //点击确定按钮执行此代码
-                        axios.get("/checkitem/delete.do?id=" + row.id).then((res)=> {
+                        axios.get("/checkItem/delete.do?id=" + row.id).then((res)=> {
                             if(!res.data.flag){
                                 //删除失败
                                 this.$message.error(res.data.message);
