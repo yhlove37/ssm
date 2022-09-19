@@ -4,6 +4,7 @@ import com.yuhao.entity.PageResult;
 import com.yuhao.pojo.Setmeal;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SetmealService {
     void add(Setmeal setmeal, Integer[] checkgroupIds);
@@ -13,4 +14,6 @@ public interface SetmealService {
     List<Setmeal> findAll();
 
     Setmeal findById(int id);
+
+    List<Map<String, Object>> findSetmealCount();
 }
