@@ -8,6 +8,7 @@ D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\CheckGroupDao.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\OrderSettingDao.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\UserDao.java
+D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\ReportServiceImpl.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\CheckItemServiceImpl.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\dao\SetmealDao.java
 D:\IdeaWorkSpace\spring cloud\SSM\health_parent\health_service_provider\src\main\java\com\yuhao\service\impl\OrderSettingServiceImpl.java

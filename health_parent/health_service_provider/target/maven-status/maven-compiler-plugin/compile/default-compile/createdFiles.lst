@@ -14,3 +14,4 @@ com\yuhao\service\impl\CheckItemServiceImpl.class
 com\yuhao\dao\MemberDao.class
 com\yuhao\service\impl\OrderSettingServiceImpl.class
 com\yuhao\dao\RoleDao.class
+com\yuhao\service\impl\ReportServiceImpl.class
